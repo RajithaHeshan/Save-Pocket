@@ -13,6 +13,9 @@
 		56284AA62CD0F48F00941DEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56284AA52CD0F48F00941DEF /* Preview Assets.xcassets */; };
 		56284AB12CD0F48F00941DEF /* Save_PocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56284AB02CD0F48F00941DEF /* Save_PocketTests.swift */; };
 		56284ABC2CD0F48F00941DEF /* Save_PocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56284ABB2CD0F48F00941DEF /* Save_PocketUITests.swift */; };
+		5F8FF8012CDB384000FCB424 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF8002CDB384000FCB424 /* LoginView.swift */; };
+		5F8FF8072CDB487F00FCB424 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF8062CDB487F00FCB424 /* CreateAccountView.swift */; };
+		5F8FF8092CDB67F700FCB424 /* Home-Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF8082CDB67F700FCB424 /* Home-Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		56284AB72CD0F48F00941DEF /* Save-PocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Save-PocketUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56284ABB2CD0F48F00941DEF /* Save_PocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Save_PocketUITests.swift; sourceTree = "<group>"; };
 		56284ABD2CD0F48F00941DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F8FF8002CDB384000FCB424 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5F8FF8062CDB487F00FCB424 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		5F8FF8082CDB67F700FCB424 /* Home-Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-Page.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				56284A9E2CD0F48D00941DEF /* Save_PocketApp.swift */,
+				5F8FF8062CDB487F00FCB424 /* CreateAccountView.swift */,
+				5F8FF8002CDB384000FCB424 /* LoginView.swift */,
 				56284AA02CD0F48D00941DEF /* ContentView.swift */,
+				5F8FF8082CDB67F700FCB424 /* Home-Page.swift */,
 				56284AA22CD0F48F00941DEF /* Assets.xcassets */,
 				56284AA72CD0F48F00941DEF /* Info.plist */,
 				56284AA42CD0F48F00941DEF /* Preview Content */,
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8FF8012CDB384000FCB424 /* LoginView.swift in Sources */,
 				56284AA12CD0F48D00941DEF /* ContentView.swift in Sources */,
+				5F8FF8092CDB67F700FCB424 /* Home-Page.swift in Sources */,
 				56284A9F2CD0F48D00941DEF /* Save_PocketApp.swift in Sources */,
+				5F8FF8072CDB487F00FCB424 /* CreateAccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
