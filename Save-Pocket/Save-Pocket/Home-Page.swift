@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct FinanceDashboardView: View {
+    @State private var selectedTimeframe = "Daily"
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -10,9 +12,11 @@ struct FinanceDashboardView: View {
                     Text("Hi, Welcome Back")
                         .font(.title)
                         .fontWeight(.bold)
+                        .padding(.horizontal)  // Ensures text is aligned nicely with the edge of the screen
                     
                     Text("Good Morning")
                         .font(.subheadline)
+                        .padding(.horizontal)  // Aligns with the "Hi, Welcome Back" text
                         .padding(.bottom, 10)
 
                     HStack {
@@ -41,23 +45,20 @@ struct FinanceDashboardView: View {
                         .cornerRadius(10)
                     
                     RoundedRectangleRevenueView() // Custom view for revenue and savings
-                    
-                    VStack {
-                        HStack {
-                            Text("Daily")
-                            Spacer()
-                            Text("Weekly")
-                            Spacer()
-                            Text("Monthly")
-                        }
-                        .padding()
-                        .background(Color.white.opacity(0.7))
-                        .cornerRadius(10)
 
-                        ExpenseView(icon: "dollarsign.circle", category: "Salary", time: "18:27 - April 30", amount: "₹4,000.00")
-                        ExpenseView(icon: "cart.fill", category: "Groceries", time: "17:00 - April 24", amount: "-₹100.00")
-                        ExpenseView(icon: "house.fill", category: "Rent", time: "8:30 - April 15", amount: "-₹674.40")
+                    Picker("Timeframe", selection: $selectedTimeframe) {
+                        Text("Daily").tag("Daily")
+                        Text("Weekly").tag("Weekly")
+                        Text("Monthly").tag("Monthly")
                     }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding()
+                    .background(Color.white.opacity(0.7))
+                    .cornerRadius(10)
+
+                    ExpenseView(icon: "dollarsign.circle", category: "Salary", time: "18:27 - April 30", amount: "₹4,000.00")
+                    ExpenseView(icon: "cart.fill", category: "Groceries", time: "17:00 - April 24", amount: "-₹100.00")
+                    ExpenseView(icon: "house.fill", category: "Rent", time: "8:30 - April 15", amount: "-₹674.40")
 
                     Spacer()
                 }
@@ -65,9 +66,12 @@ struct FinanceDashboardView: View {
             }
             .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.green.opacity(0.6)]), startPoint: .top, endPoint: .bottom))
             .edgesIgnoringSafeArea(.all)
-            .navigationTitle("Dashboard")
-            .navigationBarHidden(true)
+            .navigationBarHidden(false)
+            .navigationTitle("")  // Removes the title text
             .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {  // Moves the icon to the other side
+                    Image(systemName: "bell")
+                }
                 ToolbarItem(placement: .bottomBar) {
                     BottomNavigationBar()
                 }
