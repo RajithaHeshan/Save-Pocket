@@ -1,17 +1,18 @@
-//
-//  Save_PocketApp.swift
-//  Save-Pocket
-//
-//  Created by Heshan on 10/29/24.
-//
+
 
 import SwiftUI
+import Firebase
 
 @main
 struct Save_PocketApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            ContentView().environmentObject(CategoryModel())
         }
     }
 }
+
